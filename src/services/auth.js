@@ -29,11 +29,13 @@ export const profile = async () => {
 
 export const logout = async () => {
   const { data } = await instance.post('users/logout');
+
   return data;
 };
 
 export const fetch = async () => {
   const { data } = await instance.get('contacts');
+
   return data;
 };
 
