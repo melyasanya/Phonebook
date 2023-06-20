@@ -32,6 +32,7 @@ const handleFulfilledLogout = (state, action) => {
   state.isLoading = false;
   state.error = '';
   state.access_token = '';
+  state.profile = '';
 };
 const authSlice = createSlice({
   name: 'auth',

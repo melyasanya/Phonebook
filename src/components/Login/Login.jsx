@@ -23,7 +23,7 @@ export const Login = () => {
     };
     dispatch(loginThunk(loggedUser));
   };
-  console.log(auth);
+
   return (
     <>
       <h1>Login</h1>
