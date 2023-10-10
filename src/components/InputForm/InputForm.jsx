@@ -1,3 +1,4 @@
+import { Button, TextField } from '@mui/material';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/contactsOperations';
@@ -43,13 +44,13 @@ export const InputForm = () => {
           width: '400px',
           display: 'flex',
           flexDirection: 'column',
-          marginLeft: '8px',
-          padding: '12px',
-          border: 'solid 1px',
+          gap: '12px',
         }}
         onSubmit={onSubmit}
       >
-        <h3>Name</h3>
+        <TextField id="standard-basic" label="Name" variant="standard" />
+
+        {/* <h3>Name</h3>
         <label htmlFor="name">
           <input
             type="text"
@@ -60,8 +61,9 @@ export const InputForm = () => {
             onChange={getName}
             value={name}
           />
-        </label>
-        <h3>Number</h3>
+        </label> */}
+        <TextField id="standard-basic" label="Number" variant="standard" />
+        {/* <h3>Number</h3>
         <label htmlFor="number">
           <input
             type="tel"
@@ -72,10 +74,13 @@ export const InputForm = () => {
             onChange={getName}
             value={number}
           />
-        </label>
-        <button type="submit" style={{ width: '100px', marginTop: '16px' }}>
+        </label> */}
+        <Button variant="contained" color="success" size="medium">
           Add Contact
-        </button>
+        </Button>
+        {/* <button type="submit" style={{ width: '100px', marginTop: '16px' }}>
+          
+        </button> */}
       </form>
     </>
   );
